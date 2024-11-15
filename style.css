@@ -1,0 +1,183 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #ddd;
+    color: #333;
+    border-radius: 5px;
+}
+
+#itemsLeft {
+    font-size: 0.9rem;
+}
+
+.filters {
+    display: flex;
+    gap: 5px;
+}
+
+.filter-btn {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #555;
+}
+
+.filter-btn.active {
+    background-color: #333;
+    color: #fff;
+}
+
+.filter-btn:hover {
+    background-color: #e2e2e2;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(35deg, #ccffff, #ffcccc);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.title {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(255, 19, 240, 0.3);
+}
+
+.container {
+    width: 400px;
+    text-align: center;
+}
+
+#taskInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: #cce;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.task-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #444;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: #ffc4fb;
+}
+
+.task-item.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.delete-btn {
+    background-color: #994894;
+    border: none;
+    color: #222;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.delete-btn:hover {
+    background-color: #5e095e;
+}
+
+.heart {
+    position: relative;
+    margin: 10px auto;
+    background-color: pink;
+    height: 50px;
+    width: 50px;
+    transform: rotate(-45deg);
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background-color: pink;
+    width: 50px;
+    height: 50px;
+}
+
+.heart::before {
+    top: -25px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: 25px;
+}
+
+.beating {
+    animation: animateHeart 1s ease-in-out infinite;
+}
+
+@keyframes animateHeart {
+    0%,
+    100% {
+        transform: rotate(-45deg) scale(1);
+    }
+    50% {
+        transform: rotate(-45deg) scale(1.2);
+    }
+}
+
+.sparkle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: gold;
+    border-radius: 50%;
+    opacity: 0;
+    animation: sparkle-animation 1s ease-out forwards;
+}
+
+@keyframes sparkle-animation {
+    0% {
+        opacity: 1; /* transparency */
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
+
+#youtubePlayer {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+#languageSelector {
+    margin-top: 10px;
+}
