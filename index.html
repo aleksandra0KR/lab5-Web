@@ -1,20 +1,18 @@
 <!doctype html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <title>Todo List</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
-   <script src="https://www.youtube.com/iframe_api"></script>
-  
+    <script src="https://www.youtube.com/iframe_api"></script>
   </head>
 
   <body>
     <div class="heart" id="heart"></div>
-    <h1 class="title">Todo List</h1>
+    <h1 class="title" id="title">Todo List</h1>
     <div class="container">
-      <input type="text" id="taskInput" placeholder="What needs to be done?"/>
+      <input type="text" id="taskInput" placeholder="What needs to be done?" />
 
       <div class="header">
         <span id="itemsLeft">0 items left</span>
@@ -31,9 +29,13 @@
     <iframe
       id="youtubePlayer"
       src="https://www.youtube.com/embed/O7nMPV9rqlg?enablejsapi=1"
-      allow="autoplay; encrypted-media">
+      allow="autoplay; encrypted-media"
+    >
     </iframe>
-
- 
+    <select id="languageSelector">
+      <option value="en">English</option>
+      <option value="ru">Русский</option>
+      <option value="fr">Français</option>
+    </select>
   </body>
 </html>
