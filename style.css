@@ -180,4 +180,20 @@ body {
 
 #languageSelector {
     margin-top: 10px;
+    color: #cce;
+    background-color: #333;
+}
+
+.submit-btn {
+    background-color: #333;
+    border: none;
+    color: #cce;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-top: 5px;
+}
+
+.submit-btn:hover {
+    background-color: #5e095e;
 }
